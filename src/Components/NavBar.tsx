@@ -26,7 +26,7 @@ export default function NavBar({settings}: NavBarProps) {
             if (item.cta_button) {
                 return (
                     <li key={item.label}>
-                    <ButtonLink key={item.label} field={item.link}>
+                    <ButtonLink className="mx-auto" key={item.label} field={item.link}>
                         {item.label}
                     </ButtonLink>
                     </li>

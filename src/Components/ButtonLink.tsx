@@ -1,9 +1,10 @@
+import { LinkField } from "@prismicio/client";
 import { FilledContentRelationshipField, FilledLinkToMediaField, FilledLinkToWebField } from "@prismicio/client";
 
 interface ButtonLinkProps{
     children: React.ReactNode;
     className: string;
-    field: FilledContentRelationshipField<string, string, unknown> | FilledLinkToWebField | FilledLinkToMediaField;
+    field: FilledContentRelationshipField<string, string> | FilledLinkToWebField | FilledLinkToMediaField | LinkField;
 }
 
 
