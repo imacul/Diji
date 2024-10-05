@@ -1,12 +1,41 @@
-///Local Imports
+import { FilledContentRelationshipField, FilledLinkToMediaField, FilledLinkToWebField } from "@prismicio/client";
 
-//Global imports
-import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next";
-import clsx from "clsx";
+interface ButtonLinkProps{
+    children: React.ReactNode;
+    className: string;
+    field: FilledContentRelationshipField<string, string, unknown> | FilledLinkToWebField | FilledLinkToMediaField;
+}
 
-export default function ButtonLink({className, ...restProps}: PrismicNextLinkProps) {
-  return  <PrismicNextLink href="/"  
-    className={clsx(
-    "focus:ring-offset-3 relative inline-flex h-fit w-fit rounded-full border border-blue-100/20 bg-blue-200/10 px-4 py-2 text-blue-200 outline-none ring-yellow-300 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-yellow-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-yellow-200/40 hover:text-yellow-300 after:hover:bg-opacity-15 focus:ring-2",
-    className, )} {...restProps} />;
+
+export default function ButtonLink({children, className}: ButtonLinkProps) {
+  return (
+    <div>
+        <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
+    <span className="absolute inset-0 overflow-hidden rounded-full">
+      <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+    </span>
+    <div className="relative flex space-x-2 text-center text-lg font-medium items-center z-10 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  py-2 px-4 ring-1 ring-white/10 ">
+      <span>
+        {children}
+      </span>
+      <svg
+        fill="none"
+        height="16"
+        viewBox="0 0 24 24"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.75 8.75L14.25 12L10.75 15.25"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+      </svg>
+    </div>
+    <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+  </button>
+  </div>
+  )
 }
