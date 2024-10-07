@@ -1,12 +1,10 @@
-import { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.prismic.io',
-        pathname: '/diji/**', // Replace with your Prismic repo name
+        pathname: '/diji/**',
       },
     ],
   },
