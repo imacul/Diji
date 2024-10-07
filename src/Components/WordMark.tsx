@@ -1,4 +1,3 @@
-// src/components/WordMark.tsx
 
 export default function WordMark() {
     return (

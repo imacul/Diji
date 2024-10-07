@@ -8,6 +8,9 @@ import ButtonLink from './ButtonLink';
 import Bounded from './Bounded';
 import { BackgroundLines } from './ui/background-lines';
 import { ContainerScroll } from './ui/container-scroll-animation';
+import { HeroParallax } from './ui/hero-parallax';
+import HeroParallexComponent from './HeroParallexComponent';
+
 
 export{
     Header,
@@ -18,4 +21,6 @@ export{
     Bounded,
     BackgroundLines,
     ContainerScroll,
+    HeroParallax,
+    HeroParallexComponent,
 }

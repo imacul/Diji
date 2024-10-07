@@ -1,8 +1,7 @@
 
 //Local Imports
-import { BackgroundLines, Bounded, ButtonLink } from "@/Components";
+import { BackgroundLines, Bounded, ButtonLink, HeroParallexComponent } from "@/Components";
 import { ContainerScroll } from "@/Components/ui/container-scroll-animation";
-import  Image from "next/image";
 
 //Global imports
 import { Content, isFilled } from "@prismicio/client";
@@ -48,6 +47,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           <PrismicNextImage className="object-cover h-full width-full rounded-md" field={slice.primary.image} />
         )}
       </ContainerScroll>
+      <HeroParallexComponent />
     </Bounded>
   );
 };

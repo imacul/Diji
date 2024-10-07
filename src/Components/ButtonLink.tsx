@@ -1,3 +1,5 @@
+
+//Global imports
 import { LinkField } from "@prismicio/client";
 import { FilledContentRelationshipField, FilledLinkToMediaField, FilledLinkToWebField } from "@prismicio/client";
 

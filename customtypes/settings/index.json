@@ -61,6 +61,57 @@
             }
           }
         }
+      },
+      "heroprallex": {
+        "type": "Group",
+        "config": {
+          "label": "HeroPrallex",
+          "repeat": true,
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "Title",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            },
+            "thumbnail": {
+              "type": "Image",
+              "config": {
+                "label": "Thumbnail",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "heading_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Heading title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "paragraph": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Paragraph",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
       }
     }
   }
